@@ -22,6 +22,6 @@ public class GradeConverter {
             System.out.println("5");
         else
         System.out.println("Nezadal si slovnú známku správne!");
-
+        System.out.println("Koniec programu.");
     }
 }
