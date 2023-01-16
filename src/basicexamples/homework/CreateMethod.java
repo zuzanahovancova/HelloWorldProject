@@ -1,15 +1,13 @@
 package basicexamples.homework;
 
 import java.util.Scanner;
-
-import static java.awt.SystemColor.text;
 import static java.lang.Math.PI;
 
 public class CreateMethod {
 static double circumferenceOfCircle (double r) {
     return 2 * PI * r;
 }
-    static double areaareaOfCircle (double r) {
+static double areaareaOfCircle (double r) {
         return PI * r * r;
     }
     public static void main(String[] args) {

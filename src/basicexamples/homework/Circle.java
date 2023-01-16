@@ -11,10 +11,11 @@ public class Circle {
 
         while (true) {
 
-            System.out.println("Zadaj polomer kruhu");
-            System.out.println("Ukončenie programu, zadaj slovo: koniec");
             int myRadius;
             String text = "";
+
+            System.out.println("Zadaj polomer kruhu");
+            System.out.println("Ukončenie programu, zadaj slovo: koniec");
 
             if (scn.hasNextInt()) {
                 myRadius = scn.nextInt();
