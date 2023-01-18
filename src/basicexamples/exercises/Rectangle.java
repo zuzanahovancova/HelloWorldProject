@@ -1,5 +1,7 @@
 package basicexamples.exercises;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;
@@ -19,28 +21,58 @@ public class Rectangle {
     public static void main(String[] args) {
         double a;
         double b;
+        String odpoved;
 
-        Scanner scn = new Scanner(System.in);
+        while (true) {
+            Scanner scn = new Scanner(System.in);
+        //while (true) { //moze byt aj sem,lebo Scanner scn...atd.. je len inicializacia konzoly pre pouzivatelsky vstup,staci ju inicializovat len raz,netreba prikaz while pred to...ak to dame pod scanner scn...atd...optimalizuje sa tym program
 
-        System.out.println("Zadaj hodnotu strany a: ");
-        a = scn.nextDouble();
+            System.out.println("\nZadaj:");
+            System.out.println("(s) pre vstup hodnôt na výpočet obvodu a obsahu obdlžníka");
+            System.out.println("(q) pre ukončenie programu");
 
-        System.out.println("Zadaj hodnotu strany b: ");
-        b = scn.nextDouble();
+            odpoved = scn.nextLine();
 
-        double obvod = getPerimeter(a, b);
-        double obsah = getArea(a, b);
-        System.out.println("Obvod kruhu je: " + obvod);
-        System.out.println("Obsah kruhu je:" + obsah);
+            if (odpoved.equals("s")) {
+                System.out.println("Zadaj hodnotu strany a: ");
+                a = scn.nextDouble();
+
+                System.out.println("Zadaj hodnotu strany b: ");
+                b = scn.nextDouble();
+
+                double obvod = getPerimeter(a, b);
+                double obsah = getArea(a, b);
+                System.out.println("Obvod kruhu je: " + obvod);
+                System.out.println("Obsah kruhu je: " + obsah);
+            } else if (odpoved.equals("q")) {
+                System.out.println("Koniec programu.");
+                break;
+            } else {
+                System.out.println("Zadali ste nesprávnu možnosť! Zopakujte výber.");
+            }
+        }
+
+        @Nested
+        @DisplayName("Tests for my method")
+        class MyMethodUseCases {
+            @Test
+            public void testGetPerimeter() {
+                assertEquals(10, getPerimeter(2, 3));
+                assertEquals(13, getPerimeter(2.5, 4));
+            }
+
+            @Test
+            public void testGetArea() {
+                assertEquals(6, getArea(2, 3));
+                assertEquals(10, getArea(2.5, 4));
+                assertEquals(5, getArea(1, 5));
+            }
+        }
+        //@Test
+        //public void testGetPerimeter() {
+//assertEquals(6, getArea(2, 3));
+//assertEquals(9, getArea(3,3));
     }
-    @Test
-    public void testGetPerimeter() {
-assertEquals(6, getArea(2, 3));
-assertEquals(9, getArea(3,3));
-    }
-
-
-
 }
 
 
