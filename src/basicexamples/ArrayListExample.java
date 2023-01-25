@@ -30,6 +30,11 @@ public class ArrayListExample {
         System.out.println("---------------");
         System.out.println(poleKnih.get(0));
 
+        // vypiseme poslednu knihu v zozname,v dynamickom poli
+        System.out.println("\nPosledná kniha v zozname");
+        System.out.println("------------------");
+        System.out.println(poleKnih.get(poleKnih.size()-1));
+
         System.out.println("\nVšetky vypísané poleKnih");
         System.out.println("------------------");
 
