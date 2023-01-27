@@ -1,6 +1,6 @@
 package basicexamples.exercises;
 
-import basicexamples.exercises.model.Kniha;
+import basicexamples.exercises.model.Kniha;    // ak mame viac tried,tak nemusime vypisovat vsetky,ale staci dat jednu a za nou * a naimportuje vsetky triedy v danom package
 import basicexamples.exercises.model.KnihaSpravne;
 
 import java.util.ArrayList;
