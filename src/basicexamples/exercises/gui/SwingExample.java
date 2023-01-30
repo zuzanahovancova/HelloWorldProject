@@ -36,6 +36,7 @@ public class SwingExample {
             JButton btnOk = new JButton("Vypíš!"); //tlacidlo
             btnOk.setBounds(100, 100, 100, 20);
 
+
             btnOk.addActionListener(new ActionListener() {  //sluzi na "odchytenie" cize spracovanie zatlacenia tlacidla
                 public void actionPerformed(ActionEvent e) {
                     System.out.println("Stlačil si ok!");
